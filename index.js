@@ -3,8 +3,18 @@ import express from 'express';
 let app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  console.log('This is a Get request');
+  res.send('This is a Get request');
 });
+
+app.delete('/', (req, res) => {
+  console.log('This is a Delete request');
+  res.send('This is a Delete request');
+});
+
+app.put('/', (req, res) => {
+  console.log('This is a Put request');
+}); 
 
 app.post('/data', (req, res) => {
   let data = req.body;
